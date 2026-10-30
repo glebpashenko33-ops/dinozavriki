@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#f7c6e6">
+  <meta name="apple-mobile-web-app-title" content="Динозаврики">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <title>Динозаврики</title>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Фон: розово-сиреневое небо, радуга, холмы с цветочками -->
+  <div id="bg" aria-hidden="true">
+    <svg viewBox="0 0 1000 700" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffc6e8"/><stop offset=".55" stop-color="#e9d6ff"/><stop offset="1" stop-color="#d4f0ff"/>
+        </linearGradient>
+        <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b5ea8f"/><stop offset="1" stop-color="#7fcf72"/></linearGradient>
+        <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fe07a"/><stop offset="1" stop-color="#6cc25a"/></linearGradient>
+        <radialGradient id="sun" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fff8c2"/><stop offset=".7" stop-color="#ffd84a"/><stop offset="1" stop-color="#ffb93a"/></radialGradient>
+      </defs>
+      <rect width="1000" height="700" fill="url(#sky)"/>
+      <g opacity=".55" fill="none" stroke-width="22">
+        <path d="M120,560 A380,380 0 0 1 880,560" stroke="#ff8fc7"/>
+        <path d="M142,560 A358,358 0 0 1 858,560" stroke="#ffc27a"/>
+        <path d="M164,560 A336,336 0 0 1 836,560" stroke="#fff08a"/>
+        <path d="M186,560 A314,314 0 0 1 814,560" stroke="#a8e88a"/>
+        <path d="M208,560 A292,292 0 0 1 792,560" stroke="#8fd8ff"/>
+        <path d="M230,560 A270,270 0 0 1 770,560" stroke="#c4a8ff"/>
+      </g>
+      <g class="sun"><circle cx="860" cy="110" r="58" fill="url(#sun)"/>
+        <circle cx="842" cy="102" r="5" fill="#8a5a1a"/><circle cx="878" cy="102" r="5" fill="#8a5a1a"/>
+        <path d="M842,122 Q860,136 878,122" stroke="#8a5a1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <ellipse cx="832" cy="118" rx="7" ry="4" fill="#ff8a8a" opacity=".6"/><ellipse cx="888" cy="118" rx="7" ry="4" fill="#ff8a8a" opacity=".6"/></g>
+      <g class="cloud c1" fill="#fff"><ellipse cx="160" cy="120" rx="60" ry="30"/><ellipse cx="200" cy="100" rx="45" ry="35"/><ellipse cx="240" cy="122" rx="50" ry="26"/></g>
+      <g class="cloud c2" fill="#fff" opacity=".9"><ellipse cx="560" cy="80" rx="50" ry="24"/><ellipse cx="595" cy="64" rx="38" ry="30"/><ellipse cx="630" cy="82" rx="42" ry="22"/></g>
+      <path d="M0,520 C150,440 300,470 450,500 C600,530 760,430 1000,470 L1000,700 L0,700Z" fill="url(#hill1)"/>
+      <path d="M0,600 C180,540 360,560 520,590 C700,620 840,560 1000,570 L1000,700 L0,700Z" fill="url(#hill2)"/>
+      <g class="flowers">
+        <g transform="translate(90,612)"><circle r="7" fill="#ff8fc7"/><circle r="3" fill="#ffd23f"/></g>
+        <g transform="translate(240,590)"><circle r="6" fill="#fff"/><circle r="2.5" fill="#ffd23f"/></g>
+        <g transform="translate(400,612)"><circle r="7" fill="#c4a8ff"/><circle r="3" fill="#ffd23f"/></g>
+        <g transform="translate(610,628)"><circle r="6" fill="#ff8fc7"/><circle r="2.5" fill="#fff"/></g>
+        <g transform="translate(760,600)"><circle r="7" fill="#fff"/><circle r="3" fill="#ff8fc7"/></g>
+        <g transform="translate(920,590)"><circle r="6" fill="#c4a8ff"/><circle r="2.5" fill="#ffd23f"/></g>
+        <g transform="translate(520,660)"><circle r="8" fill="#ffd23f"/><circle r="3" fill="#ff8a3a"/></g>
+        <g transform="translate(160,668)"><circle r="8" fill="#c4a8ff"/><circle r="3" fill="#fff"/></g>
+        <g transform="translate(860,670)"><circle r="8" fill="#ff8fc7"/><circle r="3" fill="#fff"/></g>
+      </g>
+    </svg>
+    <span class="butterfly b1">🦋</span><span class="butterfly b2">🦋</span>
+  </div>
+  <main id="app"></main>
+  <script src="js/art.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/games-more.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
